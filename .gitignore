@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 .s_key
+
+.class_model
