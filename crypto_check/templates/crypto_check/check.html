@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ crypto }}</title>
+    <link href="{% static 'css/check.css' %}"  rel="stylesheet" type="text/css">
+    <link href="{% static 'js/check.js' %}" rel="script">
+</head>
+<body>
+    <button><a href="{% url 'home' %}">Back</a> </button>
+    <div class="crypto_table">
+        {% block content %}
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <h1 class="in_table">
+                            Coin
+                        </h1>
+                    </th>
+                    <th>
+                        <h1 class="in_table">
+                            Price
+                        </h1>
+                    </th>
+                    <th>
+                        <h1 class="in_table">
+                            Currency
+                        </h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h1 class="in_table">
+                            {{ crypto }}
+                        </h1>
+                    </td>
+                    <td>
+                        <h1 class="in_table">
+                            {{ price }}
+                        </h1>
+                    </td>
+                    <td>
+                        <h1 class="in_table">
+                            {{ currency }}
+                        </h1>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="refresh_button">
+        <button>
+            <a href="">Refresh</a>
+        </button>
+    </div>
+</body>
+{% endblock %}
+</html>
