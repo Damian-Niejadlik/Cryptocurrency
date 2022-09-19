@@ -30,7 +30,7 @@ def check_view(request, name: str, currency: str):
 
         return render(request, template_name='crypto_check/check.html', context={'crypto': coin,
                                                                                  'price': crypto_price,
-                                                                                 'currency': currency,
+                                                                                 'currency': currency.upper(),
                                                                                  })
     except AttributeError:
         return render(request, template_name='crypto_check/error.html')
